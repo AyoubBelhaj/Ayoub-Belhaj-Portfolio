@@ -11,7 +11,6 @@ function App() {
   return (
     <div className="App">
         <Navbar/>
-        
           <Routes>
             <Route path="/" index element={<Intro/>} />
             <Route path="/skills" element={<Skills/>} />

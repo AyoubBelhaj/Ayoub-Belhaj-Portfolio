@@ -56,3 +56,31 @@
 .socialIcon:hover img {
     filter: invert(0%);
 }
+
+@media (max-width: 460px) {
+    .footerContent {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footerText {
+        font-size: 14px; /* Reduce text size for smaller screens */
+        margin-bottom: 8px;
+    }
+
+    .socialIcons {
+        gap: 0.4rem; /* Reduce the gap between icons */
+        margin-right: 0; /* Center-align icons */
+    }
+
+    .socialIcon {
+        width: 2rem; /* Reduce icon container size */
+        height: 2rem;
+    }
+
+    .socialIcon img {
+        width: 1rem; /* Reduce icon size */
+        height: 1rem;
+    }
+}

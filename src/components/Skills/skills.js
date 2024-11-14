@@ -26,11 +26,11 @@ const Skills = () => {
             </motion.span>
             <div className="skillBars">
                 {[
-                    { img: UIDesign, title: "UI/UX Design", desc: "This is a demo text, you can write your own content here" },
-                    { img: WebDesign, title: "Web Design", desc: "This is a demo Text, you can write your own content here" },
-                    { img: AppDesign, title: "App Design", desc: "This is a demo Text, you can write your own content here" },
-                    { img: AppDesign, title: "App Design", desc: "This is a demo Text, you can write your own content here" },
-                    { img: AppDesign, title: "App Design", desc: "This is a demo Text, you can write your own content here" },
+                    { img: UIDesign, title: "Web Development", desc: "Skilled in HTML, CSS, JavaScript, ReactJS, NextJS, and other web technologies to build responsive, dynamic websites." },
+                    { img: WebDesign, title: "DevOps", desc: "Experience with Docker, Jenkins, and Linux systems, contributing to continuous integration and deployment (CI/CD) pipelines." },
+                    { img: AppDesign, title: "App Design", desc: "Design and develop mobile and web applications with a focus on UI/UX design using tools like Figma and ReactJS." },
+                    { img: AppDesign, title: "Backend Development", desc: "Strong proficiency in backend technologies like NodeJS, ExpressJS, Spring Boot, Laravel, and integrating APIs like Google and Mapbox." },
+                    { img: AppDesign, title: "Database Management", desc: "Experience in managing databases like MySQL, PostgreSQL, and MongoDB, ensuring efficient data storage and retrieval." },
                 ].map((skill, index) => (
                     <motion.div 
                         className="skillBar" 

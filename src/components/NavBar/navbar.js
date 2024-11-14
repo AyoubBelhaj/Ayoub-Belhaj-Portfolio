@@ -25,15 +25,14 @@ const Navbar = () => {
             <div className="desktopMenu">
                 <Link to='/' className={`desktopMenuListItem ${activeLink === '/' ? 'active' : ''}`} onClick={() => handleLinkClick('/')}>Home</Link>
                 <Link to='/skills' className={`desktopMenuListItem ${activeLink === '/skills' ? 'active' : ''}`} onClick={() => handleLinkClick('/skills')}>About</Link>
-                <Link to='/works' className={`desktopMenuListItem ${activeLink === '/works' ? 'active' : ''}`} onClick={() => handleLinkClick('/works')}>Portfolio</Link>
+                <Link to='/works' className={`desktopMenuListItem ${activeLink === '/works' ? 'active' : ''}`} onClick={() => handleLinkClick('/works')}>Projects</Link>
                 <Link to='/contact' className={`desktopMenuListItem ${activeLink === '/contact' ? 'active' : ''}`} onClick={() => handleLinkClick('/contact')}>Contact</Link>
             </div>
-            <button className="desktopMenuBtn" onClick={() => {
-                document.getElementById("contact").scrollIntoView({ behavior: 'smooth' });
-            }}>
-                <img src={contactImg} alt="me" className="desktopMenuImg" />Contact Me
-            </button>
-
+            <Link to="/contact">
+                <button className="desktopMenuBtn" >
+                    <img src={contactImg} alt="me" className="desktopMenuImg" />Contact Me
+                </button>
+            </Link>
             <img src={menu} alt="menu" className="mobMenu" onClick={() => setShowMenu(!showMenu)} />
             <div className="navMenu" style={{ display: showMenu ? 'flex' : 'none' }}>
                 <Link to='/' className={`ListItem ${activeLink === '/' ? 'active' : ''}`} onClick={() => handleLinkClick('/')}>Home</Link>

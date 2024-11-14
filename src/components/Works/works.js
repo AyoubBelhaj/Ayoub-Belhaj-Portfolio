@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import "./works.css";
 import Portfolio1 from '../../assets/home-with-login.PNG';
 import Portfolio2 from '../../assets/home-page.png';
+import AiFormBuilder from '../../assets/ai-builder.png';
+import PersonalPortfolio from '../../assets/portfolio.png';
+import InternshipPic from '../../assets/calendrier1.png';
 
 const Works = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,40 +14,40 @@ const Works = () => {
     const projects = [
         {
             id: 1,
-            title: "Project 1",
-            img: Portfolio1,
-            description: "This is a description of Project 1.",
-            link: "https://github.com/AyoubBelhaj/Blog/tree/master"
+            title: "AI Form Builder",
+            img: AiFormBuilder, 
+            description: "A dynamic form builder built with Next.js 14, Next-auth, and PostgreSQL. Optimized form creation efficiency by 40%.",
+            link: "https://github.com/AyoubBelhaj/ai-form-builder.git" 
         },
         {
             id: 2,
-            title: "Project 2",
-            img: Portfolio2,
-            description: "This is a description of Project 2.",
-            link: "https://github.com/AyoubBelhaj/-web_avance_sujet_A/tree/master"
+            title: "Complaint Management System",
+            img: Portfolio2, 
+            description: "Optimized a complaint management system for banks using Angular 17, Express.js, MongoDB, and Node.js. Integrated JWT for secure authentication.",
+            link: "https://github.com/AyoubBelhaj/-web_avance_sujet_A.git" 
         },
         {
             id: 3,
-            title: "Project 3",
-            img: Portfolio2,
-            description: "This is a description of Project 3.",
-            link: "https://github.com/YourRepo/Project3"
+            title: "Internship Management Application",
+            img: InternshipPic, 
+            description: "Developed an application for managing internship applications and evaluations using Spring Boot and Angular. Reduced administrative management time by 30%.",
+            link: "https://github.com/YourRepo/InternshipManagement"
         },
         {
             id: 4,
-            title: "Project 4",
-            img: Portfolio2,
-            description: "This is a description of Project 4.",
-            link: "https://github.com/YourRepo/Project4"
+            title: "Personal Portfolio",
+            img: PersonalPortfolio, 
+            description: "Developed a responsive personal portfolio with ReactJS and Framer Motion. Enhanced user experience with smooth animations, increasing interactions by 50%.",
+            link: "https://github.com/AyoubBelhaj/Portfolio" 
         },
         {
             id: 5,
-            title: "Project 5",
-            img: Portfolio2,
-            description: "This is a description of Project 5.",
-            link: "https://github.com/YourRepo/Project5"
+            title: "Blog Application",
+            img: Portfolio1, 
+            description: "Developed and improved a blog application with HTML5, CSS, JavaScript, PHP, and Laravel. Reduced loading times by 30% and improved the responsive design.",
+            link: "https://github.com/AyoubBelhaj/Blog" 
         }
-    ];
+    ];    
 
     const openModal = (project) => {
         setSelectedProject(project);
@@ -64,15 +67,14 @@ const Works = () => {
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.5 }}
             >
-                My Portfolio
+                My Projects
             </motion.h2>
             <motion.span 
                 className="worksDesc" 
                 initial={{ opacity: 0, y: -20 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.5, delay: 0.2 }}
-            >
-                This is a demo text. You can write your own content here.
+            >Welcome to my project shelfe ! take a close look and I hope it will help you
             </motion.span>
             <motion.div 
                 className="worksGrid" 
@@ -132,6 +134,7 @@ const Works = () => {
                         </motion.h2>
                         <img src={selectedProject.img} alt={selectedProject.title} />
                         <motion.p
+                        className="proj-desc"
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3, delay: 0.2 }}
@@ -145,6 +148,7 @@ const Works = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3, delay: 0.3 }}
+                            className="btn-project"
                         >
                             View Project
                         </motion.a>
