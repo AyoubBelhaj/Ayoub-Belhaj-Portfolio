@@ -11,14 +11,14 @@
 }
 
 .skillTitle {
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 4rem);
     font-weight: 600;
     margin-bottom: 1.5rem;
 }
 
 .skillDesc {
     font-weight: 300;
-    font-size: 1rem;
+    font-size:clamp(1rem, 3vw, 1.5rem);
     max-width: 50rem;
     padding: 0 2rem;
 }
@@ -52,10 +52,11 @@
 
 .skillBarText h2 {
     margin: 0;
+    font-size: clamp(1rem, 4vw, 2rem);
 }
 
 .skillBarText p {
-    font-size: 0.9rem;
+    font-size: clamp(0.75rem, 2vw, 1rem);
     font-weight: 200;
     margin: 0;
 }

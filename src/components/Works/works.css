@@ -9,13 +9,13 @@
 }
 
 .workstitle {
-    font-size: 3rem;
+    font-size: 6vw;
     margin-bottom: 1.5rem;
 }
 
 .worksDesc {
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 3vw;
     max-width: 45rem;
     padding: 0 2rem;
     margin: 0 auto 40px;
@@ -53,7 +53,7 @@
 
 .worksCard h3 {
     margin: 0.5rem 0;
-    font-size: 1.5rem; 
+    font-size: 2vw; 
     color: #d8b04a;/* Slightly larger title */
 }
 
@@ -118,4 +118,12 @@
 .proj-desc {
     color: rgba(0, 0, 0, 1);
     font-size: 15px;
+}
+
+@media screen and (max-width: 377px) {
+    .worksGrid {
+        
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive columns */
+        
+    }
 }
